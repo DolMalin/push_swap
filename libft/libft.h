@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:58:58 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/16 10:09:25 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/21 11:53:17by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,16 @@ typedef struct s_list
 /* =============== PART 1 - LIBC FUNCTIONS =============== */
 
 /* =============== STRINGS ===============*/
-size_t	ft_strlen(const char *str);
-char	*ft_strdup(const char *src);
-int		ft_strncmp(const char *str1, const char *str2, size_t length);
-size_t	ft_strlcpy(char *dest, const char *src, size_t size);
-size_t	ft_strlcat(char *dest, const char *src, size_t size);
-char	*ft_strnstr(const char *str, const char *to_find, size_t size);
-char	*ft_strchr(const char *str, int to_find);
-char	*ft_strrchr(const char *str, int to_find);
-int		ft_atoi(const char *str);
-
+size_t		ft_strlen(const char *str);
+char		*ft_strdup(const char *src);
+int			ft_strncmp(const char *str1, const char *str2, size_t length);
+size_t		ft_strlcpy(char *dest, const char *src, size_t size);
+size_t		ft_strlcat(char *dest, const char *src, size_t size);
+char		*ft_strnstr(const char *str, const char *to_find, size_t size);
+char		*ft_strchr(const char *str, int to_find);
+char		*ft_strrchr(const char *str, int to_find);
+int			ft_atoi(const char *str);
+long long	ft_atoll(const char *str);
 /* =============== CHAR ===============*/
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);

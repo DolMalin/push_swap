@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   exit_program_with_error.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 15:59:20 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 11:41:50 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/21 11:36:14 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/21 11:41:35 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-int main(int ac, char **av)
+void	exit_program_with_error(void)
 {
-	check_input_validity(ac, av);
-	return (0);
+	ft_putstr_fd("Error\n", 1);
+	exit(EXIT_FAILURE);
 }

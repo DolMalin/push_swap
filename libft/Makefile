@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/02 12:00:25 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/11/19 14:51:06 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/11/21 11:54:31 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ ft_strjoin.c\
 ft_strtrim.c\
 ft_split.c\
 ft_itoa.c\
+ft_atoll.c\
 ft_strmapi.c\
 ft_striteri.c\
 ft_putchar_fd.c\

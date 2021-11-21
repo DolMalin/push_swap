@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_stacks.c                                     :+:      :+:    :+:   */
+/*   init_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 13:44:15 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 13:48:08 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/21 15:15:19 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/21 15:48:01 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	print_stacks(t_stack *stack)
+void	init_stacks(t_list **a, int ac, char **av)
 {
-	size_t	i;
+	int		i;
 
-	i = 0;
-	while (stack->a[i])
+	i = 1;
+	while (i < ac)
 	{
-		printf("%d\n", stack->a[i]);
+		ft_lstadd_back(a, ft_lstnew(ft_atoi(av[i])));
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 14:34:26 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/11/21 13:49:18 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/11/21 15:45:36 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = push_swap
 
 
 DEBUG = \
-				print_stacks.c
+				print_stack.c
 
 INPUT_PARSING = \
 				check_input_validity.c\
@@ -24,8 +24,7 @@ ERROR_HANDLING = \
 				exit_program_with_error.c
 
 STACK_HANDLING = \
-				init_stack.c\
-				fill_stack.c
+				init_stacks.c
 
 FILES = \
 				main.c\
@@ -84,7 +83,7 @@ all: $(NAME)
 	gcc $(FLAGS) -c $< -o $@
 
 $(NAME) : $(OBJ) 
-	make -C ./libft
+	make bonus -C ./libft
 	cp ./libft/libft.a ./
 	gcc $(OBJ) libft.a -o $(NAME)
 

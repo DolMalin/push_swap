@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 14:34:26 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/11/21 18:32:30 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/11/21 20:08:22 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,8 @@ SORT_FUNCTIONS = \
 				sb.c\
 				ss.c\
 				pa.c\
-				pb.c
+				pb.c\
+				ra.c
 
 FILES = \
 				main.c\

@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:05:05 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 18:32:20 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/21 20:08:17 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ void	sb(t_list **b);
 void	ss(t_list **a, t_list **b);
 void	pa(t_list **a, t_list **b);
 void	pb(t_list **a, t_list **b);
+void	ra(t_list **a);
 
 #endif

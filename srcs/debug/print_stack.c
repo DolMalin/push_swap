@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 15:41:41 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 15:48:20 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/21 17:40:38 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,30 @@
 
 void	print_stack(t_list *a, t_list *b)
 {
-	(void)b;
-
-	while(a)
+	while (a || b)
 	{
-		printf("%d\n", (int)a->content);
-		a = a->next;
+		if (a->content && b->content)
+		{
+			printf("%s				| %s", a->content, b->content);
+			a = a->next;
+			b = b->next;
+		}
+		else if (a->content)
+		{
+			printf("%s				| ", a->content);
+			if (a->next)
+				a = a->next;
+			else
+				break;
+		}
+		else if (b->content)
+		{
+			printf("				| %s", b->content);
+			if (b->next)
+				b = b->next;
+			else
+				break;
+		}
+		printf("\n");
 	}
 }

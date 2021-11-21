@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_input_is_all_int.c                           :+:      :+:    :+:   */
+/*   print_stacks.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 11:30:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 13:05:00 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/21 13:44:15 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/21 13:48:08 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	check_input_is_all_int(int ac, char **av)
+void	print_stacks(t_stack *stack)
 {
-	int			i;
-	int			j;
-	long long	arg_int;
+	size_t	i;
 
-	i = 1;
-	j = 0;
-	while (i < ac)
+	i = 0;
+	while (stack->a[i])
 	{
-		j = 0;
-		while (av[i][j])
-		{
-			if (av[i][j] == '-' && j == 0)
-				j++;
-			if (!ft_isdigit(av[i][j]))
-				return (0);
-			j++;
-		}
-		arg_int	= ft_atoll(av[i]);
-		if (arg_int < INT_MIN || arg_int > INT_MAX)
-			return (0);
+		printf("%d\n", stack->a[i]);
 		i++;
 	}
-	return (1);
 }

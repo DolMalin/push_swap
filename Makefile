@@ -6,21 +6,33 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 14:34:26 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/11/21 11:54:41 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/11/21 13:49:18 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 
+DEBUG = \
+				print_stacks.c
+
 INPUT_PARSING = \
-				input_parsing/check_input_validity.c\
-				input_parsing/check_input_is_all_int.c\
-				input_parsing/exit_program_with_error.c
+				check_input_validity.c\
+				check_input_is_all_int.c
+
+ERROR_HANDLING = \
+				exit_program_with_error.c
+
+STACK_HANDLING = \
+				init_stack.c\
+				fill_stack.c
 
 FILES = \
 				main.c\
-				$(INPUT_PARSING)
+				$(addprefix debug/,$(DEBUG))\
+				$(addprefix input_parsing/,$(INPUT_PARSING))\
+				$(addprefix error_handling/,$(ERROR_HANDLING))\
+				$(addprefix stack_handling/,$(STACK_HANDLING))
 
 LIBFT_FILES = \
 				ft_isalpha.c\

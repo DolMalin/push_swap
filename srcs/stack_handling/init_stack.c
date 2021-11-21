@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_input_is_all_int.c                           :+:      :+:    :+:   */
+/*   init_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 11:30:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 13:05:00 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/21 13:21:41 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/21 13:52:12 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	check_input_is_all_int(int ac, char **av)
+void	init_stack(t_stack *stack, char **av, size_t len)
 {
-	int			i;
-	int			j;
-	long long	arg_int;
-
-	i = 1;
-	j = 0;
-	while (i < ac)
-	{
-		j = 0;
-		while (av[i][j])
-		{
-			if (av[i][j] == '-' && j == 0)
-				j++;
-			if (!ft_isdigit(av[i][j]))
-				return (0);
-			j++;
-		}
-		arg_int	= ft_atoll(av[i]);
-		if (arg_int < INT_MIN || arg_int > INT_MAX)
-			return (0);
-		i++;
-	}
-	return (1);
+	stack->a = malloc(sizeof(int) * len);
+	stack->b = malloc(sizeof(int) * len);
+	(void)av;
+	if (!stack->a || !stack->b)
+		exit_program_with_error();
+	//fill_stack(stack->a, av, len);
 }

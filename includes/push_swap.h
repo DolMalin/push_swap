@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:05:05 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 17:14:08 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/21 18:32:20 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,12 @@ void	exit_program_with_error(void);
 
 /* =============== STACK HANDLING =============== */
 void	init_stacks(t_list **a, t_list **b, int ac, char **av);
+
+/* =============== SORT FUNCTIONS =============== */
+void	sa(t_list **a);
+void	sb(t_list **b);
+void	ss(t_list **a, t_list **b);
+void	pa(t_list **a, t_list **b);
+void	pb(t_list **a, t_list **b);
 
 #endif

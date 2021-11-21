@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 15:59:20 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 18:33:24 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/21 18:05:10 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/21 18:05:45 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-int main(int ac, char **av)
+void	sb(t_list **b)
 {
-	t_list	*a = NULL;
-	t_list	*b = NULL;
+	t_list	*temp;
 
-	check_input_validity(ac, av);
-	init_stacks(&a, &b, ac, av);
-	print_stack(a, b);
-	pb(&a, &b);
-	printf("\n\n");
-	print_stack(a, b);
-	pa(&a, &b);
-	printf("\n\n");
-	print_stack(a, b);
-	return (0);
+	if (ft_lstsize(*b) < 3)
+		return ;
+	temp = *b;	
+	*b = (*b)->next;
+	temp->next = (*b)->next;
+	(*b)->next = temp;
 }

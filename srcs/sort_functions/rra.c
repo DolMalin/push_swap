@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 15:59:20 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/22 11:18:15 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/22 10:52:53 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/22 10:56:43 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-int main(int ac, char **av)
+void	rra(t_list **a)
 {
-	t_list	*a = NULL;
-	t_list	*b = NULL;
+	t_list	*temp_first;
+	t_list	*temp_before_last;
+	t_list	*temp_last;
 
-	check_input_validity(ac, av);
-	init_stacks(&a, &b, ac, av);
-
-	print_stack(a, b);
-	printf("\n\n");
-
-	ra(&a);
-	print_stack(a, b);
-	printf("\n\n");
-
-	rr(&a, &b);
-	print_stack(a, b);
-	printf("\n\n");
-
-	rra(&a);
-	print_stack(a, b);
-	printf("\n\n");
-
-	return (0);
+	if (ft_lstsize(*a) < 2)
+		return ;
+	temp_first = *a;
+	temp_last = ft_lstlast(*a);
+	temp_before_last = *a;
+	while (temp_before_last->next->next)
+		temp_before_last = temp_before_last->next;
+	temp_last->next = temp_first;
+	temp_before_last->next = NULL;
+	*a = temp_last;
 }

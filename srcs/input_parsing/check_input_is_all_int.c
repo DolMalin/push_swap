@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 11:30:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 13:05:00 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/22 11:33:31 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	check_input_is_all_int(int ac, char **av)
 				return (0);
 			j++;
 		}
-		arg_int	= ft_atoll(av[i]);
+		arg_int = ft_atoll(av[i]);
 		if (arg_int < INT_MIN || arg_int > INT_MAX)
 			return (0);
 		i++;

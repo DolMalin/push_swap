@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 15:15:19 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 17:34:51 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/22 11:25:39 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,4 @@ void	init_stacks(t_list **a, t_list **b, int ac, char **av)
 		i++;
 	}
 	ft_lstadd_back(b, ft_lstnew(NULL));
-	//*b = ft_lstnew(NULL);
 }

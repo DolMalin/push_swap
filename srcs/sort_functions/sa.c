@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 17:48:04 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 18:02:43 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/22 11:34:07 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	sa(t_list **a)
 
 	if (ft_lstsize(*a) < 3)
 		return ;
-	temp = *a;	
+	temp = *a;
 	*a = (*a)->next;
 	temp->next = (*a)->next;
 	(*a)->next = temp;

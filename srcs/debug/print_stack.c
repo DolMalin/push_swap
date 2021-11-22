@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 15:41:41 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 18:20:06 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/22 11:33:08 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ void	print_stack(t_list *a, t_list *b)
 			else if (a->next)
 				a = a->next;
 			else
-				break;
-			
+				break ;
 		}
 		else if (a->content)
 		{
@@ -38,7 +37,7 @@ void	print_stack(t_list *a, t_list *b)
 			if (a->next)
 				a = a->next;
 			else
-				break;
+				break ;
 		}
 		else if (b->content)
 		{
@@ -46,7 +45,7 @@ void	print_stack(t_list *a, t_list *b)
 			if (b->next)
 				b = b->next;
 			else
-				break;
+				break ;
 		}
 		printf("\n");
 	}

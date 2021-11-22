@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:05:05 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/22 11:21:25 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/22 11:37:57 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 /* =============== INCLUDES =============== */
 # include "../libft/libft.h"
 
-#include <limits.h>
-#include <stdlib.h>
+# include <limits.h>
+# include <stdlib.h>
 
 // TO REMOVE
-#include <stdio.h>
+# include <stdio.h>
 //
 
 /* =============== STRUCTURES =============== */

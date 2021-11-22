@@ -6,12 +6,11 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 14:34:26 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/11/22 11:21:31 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/11/22 11:24:33 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
-
 
 DEBUG = \
 				print_stack.c

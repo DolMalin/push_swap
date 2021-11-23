@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:05:05 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/23 14:55:23 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:58:57 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,12 @@ typedef struct	s_chunk
 	int	max;
 }				t_chunk;
 
+
+typedef struct	s_hold
+{
+	int	first_pos;
+	int	second_pos;
+}				t_hold;
 /* =============== PROTOTYPES =============== */
 
 /* =============== DEBUG /TO REMOVE/ =============== */
@@ -56,6 +62,7 @@ void	stackadd_front(t_stack **alst, t_stack *new);
 t_stack	*stacklast(t_stack *lst);
 t_stack	*stacknew(int content);
 int		stacksize(t_stack *lst);
+int		get_elem_pos(t_stack **stack, t_stack *elem);
 void	sa(t_stack **a);
 void	sb(t_stack **b);
 void	ss(t_stack **a, t_stack **b);
@@ -70,5 +77,7 @@ void	rrr(t_stack **a, t_stack **b);
 
 /* =============== SORTING =============== */
 void	sorting(t_stack **a, t_stack **b);
+int		is_in_chunk(int a, t_chunk chunk);
+t_hold	get_hold(t_stack **a, t_chunk chunk);
 
 #endif

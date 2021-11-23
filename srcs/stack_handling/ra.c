@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pa.c                                               :+:      :+:    :+:   */
+/*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 18:31:29 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/21 18:31:58 by pdal-mol         ###   ########.fr       */
+/*   Created: 202/11/21 19:56:41 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/21 20:39:43 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	pa(t_list **a, t_list **b)
+void	ra(t_stack **a)
 {
-	t_list	*temp;
+	t_stack	*temp_first;
+	t_stack	*temp_second;
+	t_stack	*temp_last;
 
-	if (ft_lstsize(*b) < 1)
+	if (stacksize(*a) < 2)
 		return ;
-	temp = (*b)->next;
-	ft_lstadd_front(a, *b);
-	*b = temp;
+	temp_second = (*a)->next;
+	temp_first = *a;
+	temp_last = stacklast(*a);
+	temp_last->next = temp_first;
+	temp_first->next = NULL;
+	*a = temp_second;
 }

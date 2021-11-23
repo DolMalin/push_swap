@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 15:59:20 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/22 11:35:52 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/23 12:13:230 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main(int ac, char **av)
 {
-	t_list	*a;
-	t_list	*b;
+	t_stack	*a;
+	t_stack	*b = NULL;
 
 	check_input_validity(ac, av);
 	init_stacks(&a, &b, ac, av);

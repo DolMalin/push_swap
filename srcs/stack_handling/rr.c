@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_stacks.c                                      :+:      :+:    :+:   */
+/*   rr.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 15:15:19 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/23 12:18:20 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/22 10:46:01 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/23 12:04:37 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	init_stacks(t_stack **a, t_stack **b, int ac, char **av)
+void	rr(t_stack **a, t_stack **b)
 {
-	int	i;
-
-	i = 1;
-	while (i < ac)
-	{
-		stackadd_back(a, stacknew(ft_atoi(av[i])));
-		i++;
-	}
-	*b = malloc(sizeof(t_stack));
+	ra(a);
+	rb(b);
 }

@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 14:34:26 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/11/22 11:24:33 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/11/23 12:02:49 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,9 +23,12 @@ ERROR_HANDLING = \
 				exit_program_with_error.c
 
 STACK_HANDLING = \
-				init_stacks.c
-
-SORT_FUNCTIONS = \
+				init_stacks.c\
+				stackadd_back.c\
+				stackadd_front.c\
+				stacklast.c\
+				stacknew.c\
+				stacksize.c\
 				sa.c\
 				sb.c\
 				ss.c\
@@ -38,13 +41,15 @@ SORT_FUNCTIONS = \
 				rrb.c\
 				rrr.c
 
+SORTING = 
+
 FILES = \
 				main.c\
 				$(addprefix debug/,$(DEBUG))\
 				$(addprefix input_parsing/,$(INPUT_PARSING))\
 				$(addprefix error_handling/,$(ERROR_HANDLING))\
 				$(addprefix stack_handling/,$(STACK_HANDLING))\
-				$(addprefix sort_functions/,$(SORT_FUNCTIONS))
+				$(addprefix sorting/,$(SORTING))
 
 LIBFT_FILES = \
 				ft_isalpha.c\

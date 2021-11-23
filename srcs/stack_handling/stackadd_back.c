@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sb.c                                               :+:      :+:    :+:   */
+/*   stackadd_back.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 18:05:10 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/22 11:34:28 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/23 11:45:54 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/23 11:53:54 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	sb(t_list **b)
+void	stackadd_back(t_stack **alst, t_stack *new)
 {
-	t_list	*temp;
-
-	if (ft_lstsize(*b) < 3)
-		return ;
-	temp = *b;
-	*b = (*b)->next;
-	temp->next = (*b)->next;
-	(*b)->next = temp;
+	if (*(alst))
+		stacklast((*alst))->next = new;
+	else
+		*alst = new;
 }

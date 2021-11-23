@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:05:05 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/22 11:37:57 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/23 12:14:45 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,23 @@
 //
 
 /* =============== STRUCTURES =============== */
+typedef struct	s_stack
+{
+	int	content;
+	struct s_stack *next;
+}				t_stack;
+
+
+typedef struct	s_chunk
+{
+	int	min;
+	int	max;
+}				t_chunk;
 
 /* =============== PROTOTYPES =============== */
 
 /* =============== DEBUG /TO REMOVE/ =============== */
-void	print_stack(t_list *a, t_list *b);
+void	print_stack(t_stack *a, t_stack *b);
 
 /* =============== INPUT PARSING =============== */
 int		check_input_is_all_int(int ac, char **av);
@@ -38,19 +50,24 @@ void	check_input_validity(int ac, char **av);
 void	exit_program_with_error(void);
 
 /* =============== STACK HANDLING =============== */
-void	init_stacks(t_list **a, t_list **b, int ac, char **av);
+void	init_stacks(t_stack **a, t_stack **b, int ac, char **av);
+void	stackadd_back(t_stack **alst, t_stack *new);
+void	stackadd_front(t_stack **alst, t_stack *new);
+t_stack	*stacklast(t_stack *lst);
+t_stack	*stacknew(int content);
+int		stacksize(t_stack *lst);
+void	sa(t_stack **a);
+void	sb(t_stack **b);
+void	ss(t_stack **a, t_stack **b);
+void	pa(t_stack **a, t_stack **b);
+void	pb(t_stack **a, t_stack **b);
+void	ra(t_stack **a);
+void	rb(t_stack **b);
+void	rr(t_stack **a, t_stack **b);
+void	rra(t_stack **a);
+void	rrb(t_stack **b);
+void	rrr(t_stack **a, t_stack **b);
 
-/* =============== SORT FUNCTIONS =============== */
-void	sa(t_list **a);
-void	sb(t_list **b);
-void	ss(t_list **a, t_list **b);
-void	pa(t_list **a, t_list **b);
-void	pb(t_list **a, t_list **b);
-void	ra(t_list **a);
-void	rb(t_list **b);
-void	rr(t_list **a, t_list **b);
-void	rra(t_list **a);
-void	rrb(t_list **b);
-void	rrr(t_list **a, t_list **b);
+/* =============== SORTING =============== */
 
 #endif

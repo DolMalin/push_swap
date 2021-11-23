@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_stacks.c                                      :+:      :+:    :+:   */
+/*   sorting.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 15:15:19 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/23 12:18:20 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/22 18:45:11 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/22 18:59:51 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	init_stacks(t_stack **a, t_stack **b, int ac, char **av)
-{
-	int	i;
 
-	i = 1;
-	while (i < ac)
+void	get_hold_first(t_list **a, t_chunk *chunk)
+{
+	int	pos;
+
+	pos = 0;
+	while ((*a)->next)
 	{
-		stackadd_back(a, stacknew(ft_atoi(av[i])));
-		i++;
 	}
-	*b = malloc(sizeof(t_stack));
+
+	
+}
+
+void	sorting(t_list **a, t_list **b)
+{
+	(void)b;
 }

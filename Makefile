@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 14:34:26 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/11/23 12:02:49 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/11/23 12:58:25 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,9 @@ STACK_HANDLING = \
 				rrb.c\
 				rrr.c
 
-SORTING = 
+SORTING =		\
+				sorting.c
+
 
 FILES = \
 				main.c\

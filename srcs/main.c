@@ -23,6 +23,6 @@ int main(int ac, char **av)
 	print_stack(a, b);
 	printf("\n\n");
 
-	//sorting(&a, &b);
+	sorting(&a, &b);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 15:15:19 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/23 12:18:20 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:09:50 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	init_stacks(t_stack **a, t_stack **b, int ac, char **av)
 		stackadd_back(a, stacknew(ft_atoi(av[i])));
 		i++;
 	}
-	*b = malloc(sizeof(t_stack));
+	b = malloc(sizeof(t_stack));
 }

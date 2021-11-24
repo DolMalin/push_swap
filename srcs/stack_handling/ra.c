@@ -26,4 +26,5 @@ void	ra(t_stack **a)
 	temp_last->next = temp_first;
 	temp_first->next = NULL;
 	*a = temp_second;
+	ft_putstr_fd("ra\n", 1);
 }

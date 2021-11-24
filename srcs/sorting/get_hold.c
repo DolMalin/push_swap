@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 16:57:04 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/23 16:57:32 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/24 11:39:35 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 t_hold	get_hold(t_stack **a, t_chunk chunk)
 {
 	t_hold	hold;
+	t_stack	*start;
 	int		count;
 	int		i;
 
@@ -22,19 +23,20 @@ t_hold	get_hold(t_stack **a, t_chunk chunk)
 	i = 0;
 	hold.first_pos = -1;
 	hold.second_pos = -1;
-	while ((*a))
+	start = *a;
+	while (start)
 	{
-		if (is_in_chunk((*a)->content, chunk) && count == 0)
+		if (is_in_chunk(start->content, chunk) && count == 0)
 		{
 			hold.first_pos = i;
 			count++;
 		}
-		else if (is_in_chunk((*a)->content, chunk) && count == 1)
+		else if (is_in_chunk(start->content, chunk) && count == 1)
 		{
 			hold.second_pos = i;
 			count++;
 		}
-		*a = (*a)->next;
+		start = start->next;
 		i++;
 	}
 	return (hold);

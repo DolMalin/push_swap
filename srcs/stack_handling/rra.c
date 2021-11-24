@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 10:52:53 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/23 12:05:13 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/24 12:14:58 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ void	rra(t_stack **a)
 	temp_last->next = temp_first;
 	temp_before_last->next = NULL;
 	*a = temp_last;
+	ft_putstr_fd("rra\n", 1);
 }

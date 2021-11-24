@@ -12,6 +12,11 @@
 
 #include "../includes/push_swap.h"
 
+/* 
+	- Protect all malloc
+	- Free stack after use
+*/
+
 int main(int ac, char **av)
 {
 	t_stack	*a;
@@ -24,5 +29,7 @@ int main(int ac, char **av)
 	printf("\n\n");
 
 	sorting(&a, &b);
+	print_stack(a, b);
+	printf("\n\n");
 	return (0);
 }

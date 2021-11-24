@@ -6,18 +6,19 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 10:52:53 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/24 12:14:58 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/24 12:27:05 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	rra(t_stack **a)
+void	rra(t_stack **a, t_stack **b)
 {
 	t_stack	*temp_first;
 	t_stack	*temp_before_last;
 	t_stack	*temp_last;
 
+	(void)b;
 	if (stacksize(*a) < 2)
 		return ;
 	temp_first = *a;

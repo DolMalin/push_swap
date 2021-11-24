@@ -12,12 +12,13 @@
 
 #include "../../includes/push_swap.h"
 
-void	ra(t_stack **a)
+void	ra(t_stack **a, t_stack **b)
 {
 	t_stack	*temp_first;
 	t_stack	*temp_second;
 	t_stack	*temp_last;
 
+	(void)b;
 	if (stacksize(*a) < 2)
 		return ;
 	temp_second = (*a)->next;

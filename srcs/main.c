@@ -20,7 +20,7 @@
 int main(int ac, char **av)
 {
 	t_stack	*a;
-	t_stack	*b = NULL;
+	t_stack	*b;
 
 	check_input_validity(ac, av);
 	init_stacks(&a, &b, ac, av);

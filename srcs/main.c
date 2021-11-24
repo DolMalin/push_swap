@@ -29,7 +29,7 @@ int main(int ac, char **av)
 	printf("\n\n");
 
 	sorting(&a, &b);
-	print_stack(a, b);
+	//print_stack(a, b);
 	printf("\n\n");
 	return (0);
 }

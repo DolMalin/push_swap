@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 18:45:11 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/24 13:40:18 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:09:01 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ void	sorting(t_stack **a, t_stack **b)
 
 	chunk.min = 0;
 	chunk.max = 20;
-	sort_move(a, b, chunk);
-	print_stack(*a, *b);
-	sort_move(a, b, chunk);
+	while(sort_move(a, b, chunk))
+		;
 }

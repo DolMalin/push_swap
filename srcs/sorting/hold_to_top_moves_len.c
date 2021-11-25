@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting.c                                          :+:      :+:    :+:   */
+/*   hold_to_top_moves_len.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 18:45:11 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/25 12:14:20 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/25 10:35:53 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/25 10:36:22 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	sorting(t_stack **a, t_stack **b)
+int	hold_to_top_moves_len(int hold_pos, int stack_size)
 {
-	sort_chunk(a, b, 0, 19);
+	if (hold_pos < stack_size / 2)
+		return (hold_pos);
+	return (stack_size - hold_pos);
 }

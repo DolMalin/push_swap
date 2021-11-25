@@ -18,10 +18,7 @@ void	pb(t_stack **a, t_stack **b)
 	t_stack *start_a;
 
 	start_a = (*a)->next;
-	stackadd_back(b, *a);
-	(*a)->next = NULL;
+	stackadd_front(b, *a);
 	*a = start_a;
-
 	ft_putstr_fd("pb\n", 1);
-	print_stack(*a, *b);
 }

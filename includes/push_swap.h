@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:05:05 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/24 12:28:48 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:15:47 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void	stackadd_front(t_stack **alst, t_stack *new);
 t_stack	*stacklast(t_stack *lst);
 t_stack	*stacknew(int content);
 int		stacksize(t_stack *lst);
+int		stackmin(t_stack **a);
 int		get_elem_pos(t_stack **stack, t_stack *elem);
 void	sa(t_stack **a, t_stack **b);
 void	sb(t_stack **b, t_stack **a);
@@ -79,5 +80,10 @@ void	rrr(t_stack **a, t_stack **b);
 void	sorting(t_stack **a, t_stack **b);
 int		is_in_chunk(int a, t_chunk chunk);
 t_hold	get_hold(t_stack **a, t_chunk chunk);
-
+int		hold_to_top_moves_len(int hold_pos, int stack_size);
+void	move_elem_in_stack(t_stack **a, t_stack **b, void (*f)(t_stack **, t_stack **), int count);
+int		put_nearest_to_top(t_stack **a, t_stack **b, t_hold hold, int stack_size);
+void	put_min_to_top(t_stack **b);
+int		sort_chunk_move(t_stack **a, t_stack **b, int min, int max);
+void	sort_chunk(t_stack **a, t_stack **b, int min, int max);
 #endif

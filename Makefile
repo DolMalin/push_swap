@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 14:34:26 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/11/23 16:56:44 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/11/25 12:18:19 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ STACK_HANDLING = \
 				stacklast.c\
 				stacknew.c\
 				stacksize.c\
+				stackmin.c\
 				get_elem_pos.c\
 				sa.c\
 				sb.c\
@@ -40,12 +41,18 @@ STACK_HANDLING = \
 				rr.c\
 				rra.c\
 				rrb.c\
-				rrr.c
+				rrr.c\
+				put_min_on_top.c\
+				put_nearest_to_top.c
 
 SORTING = \
 				sorting.c\
 				is_in_chunk.c\
-				get_hold.c
+				get_hold.c\
+				hold_to_top_moves_len.c\
+				move_elem_in_stack.c\
+				sort_chunk_move.c\
+				sort_chunk.c
 
 
 FILES = \

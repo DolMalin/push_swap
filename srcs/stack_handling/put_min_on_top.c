@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting.c                                          :+:      :+:    :+:   */
+/*   put_min_on_top.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 18:45:11 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/25 12:14:20 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/25 12:14:59 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/25 12:15:31 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	sorting(t_stack **a, t_stack **b)
+void	put_min_to_top(t_stack **b)
 {
-	sort_chunk(a, b, 0, 19);
+	int	min;
+
+	if (stacksize(*b) < 1)
+		return ;
+	min = stackmin(b);
+	while ((*b)->content != min)
+		rb(b, b);
 }

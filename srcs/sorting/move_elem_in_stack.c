@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting.c                                          :+:      :+:    :+:   */
+/*   move_elem_in_stack.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 18:45:11 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/25 12:14:20 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/25 10:37:48 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/25 10:38:10 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	sorting(t_stack **a, t_stack **b)
+void	move_elem_in_stack(t_stack **a, t_stack **b, void (*f)(t_stack **, t_stack **), int count)
 {
-	sort_chunk(a, b, 0, 19);
+	int	i;
+
+	i = 0;
+	while (i < count)
+	{
+		(*f)(a, b);
+		i++;
+	}
 }

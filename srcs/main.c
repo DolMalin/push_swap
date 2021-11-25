@@ -15,6 +15,7 @@
 /* 
 	- Protect all malloc
 	- Free stack after use
+	- use stacksize / 2 on min/max to top to define use of rb/rrb
 */
 
 int main(int ac, char **av)
@@ -24,12 +25,8 @@ int main(int ac, char **av)
 
 	check_input_validity(ac, av);
 	init_stacks(&a, &b, ac, av);
-
 	print_stack(a, b);
-	printf("\n\n");
-
 	sorting(&a, &b);
-	//print_stack(a, b);
-	printf("\n\n");
+	print_stack(a, b);
 	return (0);
 }

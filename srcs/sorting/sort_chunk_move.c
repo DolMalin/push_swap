@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 12:10:44 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/25 12:17:30 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:43:29 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	sort_chunk_move(t_stack **a, t_stack **b, int min, int max)
 	{
 		put_min_to_top(b);
 		pb(a, b);
-		print_stack(*a, *b);
 		return (1);
 	}
 	return (0);

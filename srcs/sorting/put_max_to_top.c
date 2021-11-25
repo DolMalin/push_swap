@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pa.c                                               :+:      :+:    :+:   */
+/*   put_max_to_top.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 18:31:29 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/25 12:37:46 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/11/25 12:31:44 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/11/25 12:41:38 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	pa(t_stack **a, t_stack **b)
+void	put_max_to_top(t_stack **b)
 {
-	t_stack *start_b;
+	int	max;
 
-	start_b = (*b)->next;
-	stackadd_front(a, *b);
-	*b = start_b;
-	ft_putstr_fd("pa\n", 1);
+	if (stacksize(*b) < 1)
+		return ;
+	max = stackmax(b);
+	while ((*b)->content != max)
+		rb(b, b);
 }

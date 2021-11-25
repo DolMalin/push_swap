@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 14:34:26 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/11/25 12:36:12 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/11/25 13:00:32 by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,8 @@ SORTING = \
 				put_nearest_to_top.c\
 				move_elem_in_stack.c\
 				sort_chunk_move.c\
-				sort_chunk.c
+				sort_chunk.c\
+				sort_max.c\
 
 
 FILES = \

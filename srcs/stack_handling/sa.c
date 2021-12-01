@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 17:48:04 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/24 12:27:41 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/01 18:44:40 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ void	sa(t_stack **a, t_stack **b)
 	*a = (*a)->next;
 	temp->next = (*a)->next;
 	(*a)->next = temp;
+	ft_putstr_fd("sa\n", 1);
 }

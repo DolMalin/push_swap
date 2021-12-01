@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting.c                                          :+:      :+:    :+:   */
+/*   sort_three.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 18:45:11 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/01 18:56:26 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/12/01 18:54:47 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/12/01 18:55:06 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	sorting(t_stack **a, t_stack **b)
+void	sort_three(t_stack **a, t_stack **b)
 {
-	if (stacksize(*a) == 3)
-		sort_three(a, b);
-	if (stacksize(*a) > 5)
+	int	top;
+	int	mid;
+	int	bot;
+
+	top = (*a)->content;
+	mid = (*a)->next->content;
+	bot = (*a)->next->next ->content;
+	if (top < mid && mid < bot)
+		sa(a, b);
+	else if (top > mid && mid > bot)
 	{
-		sort_chunk(a, b, 0, 19);
-		sort_max(a, b);
+		sa(a, b);
+		rra(a, b);
 	}
+	else if (top > mid && mid < bot)
+		ra(a, b);
+	else if (top < mid && mid > bot && top < bot)
+	{
+		sa(a, b);
+		ra(a, b);
+	}
+	else if (top < mid && mid > bot && top > bot)
+		rra(a, b);
 }

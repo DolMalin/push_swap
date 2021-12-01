@@ -14,7 +14,8 @@
 
 /* 
 	- check if double in input
-	- shorten algo for < 10 nbrs
+	- input can be a long string of args too? (checker)
+	- shorten algo for < 5 nbrs
 */
 
 int main(int ac, char **av)

@@ -91,4 +91,5 @@ void	put_max_to_top(t_stack **b);
 int		sort_chunk_move(t_stack **a, t_stack **b, int min, int max);
 void	sort_chunk(t_stack **a, t_stack **b, int min, int max);
 void	sort_max(t_stack **a, t_stack **b);
+void	sort_three(t_stack **a, t_stack **b);
 #endif

@@ -6,7 +6,7 @@
 #    By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 14:34:26 by pdal-mol          #+#    #+#              #
-#    Updated: 2021/11/25 13:00:32 by pdal-mol         ###   ########.fr        #
+#    Updated: 2021/12/01 11:00:28by pdal-mol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ ERROR_HANDLING = \
 STACK_HANDLING = \
 				init_stacks.c\
 				stackadd_back.c\
+				stackclear.c\
 				stackadd_front.c\
 				stacklast.c\
 				stacknew.c\
@@ -107,6 +108,7 @@ LIBFT_FILES = \
 SRCS = $(addprefix ./srcs/,$(FILES))
 SRCS_LIBFT = $(addprefix ./libft/,$(LIBFT_FILES))
 OBJ = $(SRCS:.c=.o)
+ARGS = `arg="$(filter-out $@,$(MAKECMDGOALS))" && echo $${arg:-${1}}`
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -124,6 +126,12 @@ clean:
 	make -C ./libft clean
 	/bin/rm -rf $(OBJ)
 
+%:
+    @:
+
+leaks: $(NAME)
+	leaks -atExit -- ./$(NAME) $(call args,defaultstring)
+
 fclean: clean
 	/bin/rm -rf libftprintf.a
 	/bin/rm -rf libft/libft.a
@@ -131,5 +139,11 @@ fclean: clean
 	/bin/rm -rf $(NAME)
 
 re : fclean all
+
+%:
+    @:
+
+leaks: $(NAME)
+	leaks -atExit -- ./$(NAME) $(call ARGS,defaultstring)
 
 .PHONY: all clean fclean re

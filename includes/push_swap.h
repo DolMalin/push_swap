@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:05:05 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/25 13:00:42 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/01 11:20:42by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	exit_program_with_error(void);
 
 /* =============== STACK HANDLING =============== */
 void	init_stacks(t_stack **a, t_stack **b, int ac, char **av);
+void	stackclear(t_stack **stack, void (*del)(void *));
 void	stackadd_back(t_stack **alst, t_stack *new);
 void	stackadd_front(t_stack **alst, t_stack *new);
 t_stack	*stacklast(t_stack *lst);

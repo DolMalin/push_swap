@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   stackclear.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 15:59:20 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/23 12:13:230 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/12/01 11:17:59 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/12/01 11:41:39 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-/* 
-	- Protect all malloc
-	- Free stack after use
-	- use stacksize / 2 on min/max to top to define use of rb/rrb
-*/
-
-int main(int ac, char **av)
+void	stackclear(t_stack **stack, void (*del)(void *))
 {
-	t_stack	*a;
-	t_stack	*b;
+	t_stack	*buff;
 
-	check_input_validity(ac, av);
-	init_stacks(&a, &b, ac, av);
-	print_stack(a, b);
-	sorting(&a, &b);
-	print_stack(a, b);
-	stackclear(&a, free);
-	stackclear(&b, free);
-	return (0);
+	while ((*stack))
+	{
+		buff = *stack;
+		*stack = (*stack)->next;
+		del(buff);
+	}
+	stack = NULL;
 }
-

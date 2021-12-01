@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stackmax.c                                         :+:      :+:    :+:   */
+/*   stackmax_elem.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 12:28:25 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/01 13:30:30 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/12/01 13:55:38 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/12/01 13:56:33 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	stackmax(t_stack **a)
+t_stack	*stackmax_elem(t_stack **a)
 {
 	t_stack *start;
 	int	max;
@@ -27,5 +27,5 @@ int	stackmax(t_stack **a)
 	}
 	if (start->content > max)
 		max = start->content;
-	return (max);
+	return (start);
 }

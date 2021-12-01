@@ -13,9 +13,7 @@
 #include "../includes/push_swap.h"
 
 /* 
-	- Protect all malloc
-	- Free stack after use
-	- use stacksize / 2 on min/max to top to define use of rb/rrb
+	- shorten algo for < 10 nbrs
 */
 
 int main(int ac, char **av)
@@ -29,7 +27,5 @@ int main(int ac, char **av)
 	sorting(&a, &b);
 	print_stack(a, b);
 	stackclear(&a, free);
-	stackclear(&b, free);
 	return (0);
 }
-

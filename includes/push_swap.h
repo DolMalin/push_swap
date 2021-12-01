@@ -65,6 +65,7 @@ t_stack	*stacknew(int content);
 int		stacksize(t_stack *lst);
 int		stackmin(t_stack **a);
 int		stackmax(t_stack **a);
+t_stack	*stackmax_elem(t_stack **a);
 int		get_elem_pos(t_stack **stack, t_stack *elem);
 void	sa(t_stack **a, t_stack **b);
 void	sb(t_stack **b, t_stack **a);

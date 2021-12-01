@@ -32,6 +32,7 @@ STACK_HANDLING = \
 				stacksize.c\
 				stackmin.c\
 				stackmax.c\
+				stackmax_elem.c\
 				get_elem_pos.c\
 				sa.c\
 				sb.c\
@@ -126,12 +127,6 @@ clean:
 	make -C ./libft clean
 	/bin/rm -rf $(OBJ)
 
-%:
-    @:
-
-leaks: $(NAME)
-	leaks -atExit -- ./$(NAME) $(call args,defaultstring)
-
 fclean: clean
 	/bin/rm -rf libftprintf.a
 	/bin/rm -rf libft/libft.a
@@ -146,4 +141,4 @@ re : fclean all
 leaks: $(NAME)
 	leaks -atExit -- ./$(NAME) $(call ARGS,defaultstring)
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean leaks re

@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 16:13:23 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/23 16:16:15 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/01 14:09:58 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 int	get_elem_pos(t_stack **stack, t_stack *elem)
 {
+	t_stack *start;
 	int	i;
 
 	i = 0;
-	while ((*stack)->next)
+	start = *stack;
+	while (start->next)
 	{
-		if (*stack == elem)
+		if (start == elem)
 			return (i);
 		i++;
-		*stack = (*stack)->next;
+		start = start->next;
 	}
-	if (*stack == elem)
+	if (start == elem)
 		return (i);
 	return (-1);
 }

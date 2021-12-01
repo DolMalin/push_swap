@@ -13,6 +13,7 @@
 #include "../includes/push_swap.h"
 
 /* 
+	- check if double in input
 	- shorten algo for < 10 nbrs
 */
 

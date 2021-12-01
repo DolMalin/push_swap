@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_input_validity.c                             :+:      :+:    :+:   */
+/*   check_double.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 11:15:13 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/02 00:03:31 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/12/01 23:49:23 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/12/02 00:06:39 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	check_input_validity(int ac, char **av)
+int	check_double(char **av)
 {
-	if (ac < 2)
-		exit(EXIT_FAILURE);
-	if (!check_input_is_all_int(ac, av) || check_double(av))
-		exit_program_with_error();
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	while (av[i])
+	{
+		j = i + 1;
+		while (av[j])
+		{
+			if (av[i][0] == av[j][0])
+				return (1);
+			j++;
+		}
+		i++;
+	}
+	return (0);
 }

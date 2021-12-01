@@ -17,12 +17,14 @@ DEBUG = \
 
 INPUT_PARSING = \
 				check_input_validity.c\
-				check_input_is_all_int.c
+				check_input_is_all_int.c\
+				check_double.c
 
 ERROR_HANDLING = \
 				exit_program_with_error.c
 
 STACK_HANDLING = \
+				check_stack_sort.c\
 				init_stacks.c\
 				stackadd_back.c\
 				stackclear.c\

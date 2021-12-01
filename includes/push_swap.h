@@ -51,12 +51,14 @@ void	print_stack(t_stack *a, t_stack *b);
 /* =============== INPUT PARSING =============== */
 int		check_input_is_all_int(int ac, char **av);
 void	check_input_validity(int ac, char **av);
+int		check_double(char **av);
 
 /* =============== ERROR HANDLING =============== */
 void	exit_program_with_error(void);
 
 /* =============== STACK HANDLING =============== */
 void	init_stacks(t_stack **a, t_stack **b, int ac, char **av);
+int		check_stack_sort(t_stack **a);
 void	stackclear(t_stack **stack, void (*del)(void *));
 void	stackadd_back(t_stack **alst, t_stack *new);
 void	stackadd_front(t_stack **alst, t_stack *new);

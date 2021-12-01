@@ -13,9 +13,9 @@
 #include "../includes/push_swap.h"
 
 /* 
-	- check if double in input
 	- input can be a long string of args too? (checker)
-	- shorten algo for < 5 nbrs
+	- shorten algo for 4 and 5 nbrs
+	- opti (store all instructions in a list and then replace useless moves)
 */
 
 int main(int ac, char **av)

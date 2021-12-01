@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_input_validity.c                             :+:      :+:    :+:   */
+/*   check_stack_sort.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 11:15:13 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/02 00:03:31 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/12/01 23:49:44 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/12/01 23:50:11 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	check_input_validity(int ac, char **av)
+int	check_stack_sort(t_stack **a)
 {
-	if (ac < 2)
-		exit(EXIT_FAILURE);
-	if (!check_input_is_all_int(ac, av) || check_double(av))
-		exit_program_with_error();
+	t_stack *start;
+
+	start = *a;
+	while (start->next)
+	{
+		if (start->content > start->next->content)
+			return (0);
+		start = start->next;	
+	}
+	return (1);
 }

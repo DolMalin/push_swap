@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 18:54:47 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/01 18:55:06 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/02 12:59:45 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ void	sort_three(t_stack **a, t_stack **b)
 	top = (*a)->content;
 	mid = (*a)->next->content;
 	bot = (*a)->next->next ->content;
-	if (top < mid && mid < bot)
+	if (top > mid && mid < bot && top < bot)
 		sa(a, b);
-	else if (top > mid && mid > bot)
+	else if (top > mid && mid > bot && top > bot)
 	{
 		sa(a, b);
 		rra(a, b);
 	}
-	else if (top > mid && mid < bot)
+	else if (top > mid && mid < bot && top > bot)
 		ra(a, b);
 	else if (top < mid && mid > bot && top < bot)
 	{

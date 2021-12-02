@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_chunk_move.c                                  :+:      :+:    :+:   */
+/*   stackmin_elem.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 12:10:44 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/02 16:56:40 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/12/02 16:40:28 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/12/02 16:41:37 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	sort_chunk_move(t_stack **a, t_stack **b, int min, int max)
+t_stack	*stackmin_elem(t_stack **a)
 {
-	t_hold	hold;
-	t_chunk	chunk;
+	t_stack *start;
+	t_stack	*min;
 
-	chunk.min = min;
-	chunk.max = max;
-	hold = get_hold(a, chunk);
-	if (put_nearest_to_top(a, b, hold, stacksize(*a)))
+	start = *a;
+	min = start;
+	while (start->next)
 	{
-		put_minb_to_top(b);
-		pb(a, b);
-		return (1);
+		if (start->content < min->content)
+			min = start;
+		start = start->next;
 	}
-	return (0);
+	if (start->content < min->content)
+		min = start;
+	return (min);
 }

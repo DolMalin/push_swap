@@ -34,6 +34,7 @@ STACK_HANDLING = \
 				stacksize.c\
 				stackmin.c\
 				stackmax.c\
+				stackmin_elem.c\
 				stackmax_elem.c\
 				get_elem_pos.c\
 				sa.c\
@@ -53,7 +54,8 @@ SORTING = \
 				is_in_chunk.c\
 				get_hold.c\
 				hold_to_top_moves_len.c\
-				put_min_to_top.c\
+				put_mina_to_top.c\
+				put_minb_to_top.c\
 				put_max_to_top.c\
 				put_nearest_to_top.c\
 				move_elem_in_stack.c\

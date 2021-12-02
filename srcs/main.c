@@ -27,9 +27,9 @@ int main(int ac, char **av)
 
 	args = check_input_validity(ac, av);
 	init_stacks(&a, &b, args);
-	print_stack(a, b);
+//	print_stack(a, b);
 	sorting(&a, &b);
-	print_stack(a, b);
+//	print_stack(a, b);
 	stackclear(&a, free);
 
 	if (ac > 2)

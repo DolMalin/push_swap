@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_chunk_move.c                                  :+:      :+:    :+:   */
+/*   put_minb_to_top.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 12:10:44 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/02 16:56:40 by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/12/02 16:58:58 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/12/02 17:01:00 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "../../includes/push_swap.h"
 
-int	sort_chunk_move(t_stack **a, t_stack **b, int min, int max)
+void	put_minb_to_top(t_stack **b)
 {
-	t_hold	hold;
-	t_chunk	chunk;
+	int		min;
+	t_stack	*min_elem;
 
-	chunk.min = min;
-	chunk.max = max;
-	hold = get_hold(a, chunk);
-	if (put_nearest_to_top(a, b, hold, stacksize(*a)))
+	if (stacksize(*b) < 1)
+		return ;
+	min = stackmin(b);
+	min_elem = stackmin_elem(b);
+	if (get_elem_pos(b, min_elem) < stacksize(*b) / 2)
 	{
-		put_minb_to_top(b);
-		pb(a, b);
-		return (1);
+		while ((*b)->content != min)
+			rb(b, b);
+		return ;
 	}
-	return (0);
+	while ((*b)->content != min)
+		rrb(b, b);
 }

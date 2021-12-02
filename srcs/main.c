@@ -13,7 +13,7 @@
 #include "../includes/push_swap.h"
 
 /* 
-	- segfault with negative nbrs (sort chunk should start at lowest nbr)
+	- rb / rrb problem
 	- opti (store all instructions in a list and then replace useless moves)
 	- opti for 500 nbr
 */

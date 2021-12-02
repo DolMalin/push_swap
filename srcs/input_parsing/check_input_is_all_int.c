@@ -6,32 +6,32 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 11:30:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/22 11:33:31 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/02 11:55:42 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	check_input_is_all_int(int ac, char **av)
+int	check_input_is_all_int(int ac, char **args)
 {
 	int			i;
 	int			j;
 	long long	arg_int;
 
-	i = 1;
+	i = 0;
 	j = 0;
-	while (i < ac)
+	while (i < ac - 1)
 	{
 		j = 0;
-		while (av[i][j])
+		while (args[i][j])
 		{
-			if (av[i][j] == '-' && j == 0)
+			if (args[i][j] == '-' && j == 0)
 				j++;
-			if (!ft_isdigit(av[i][j]))
+			if (!ft_isdigit(args[i][j]))
 				return (0);
 			j++;
 		}
-		arg_int = ft_atoll(av[i]);
+		arg_int = ft_atoll(args[i]);
 		if (arg_int < INT_MIN || arg_int > INT_MAX)
 			return (0);
 		i++;

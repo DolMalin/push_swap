@@ -13,22 +13,33 @@
 #include "../includes/push_swap.h"
 
 /* 
-	- input can be a long string of args too? (checker)
 	- segfault with negative nbrs
 	- shorten algo for 4 and 5 nbrs
 	- opti (store all instructions in a list and then replace useless moves)
+	- opti for 500 nbr
 */
 
 int main(int ac, char **av)
 {
+	char	**args;
 	t_stack	*a;
 	t_stack	*b;
 
-	check_input_validity(ac, av);
-	init_stacks(&a, &b, ac, av);
+	args = check_input_validity(ac, av);
+	init_stacks(&a, &b, args);
 	print_stack(a, b);
 	sorting(&a, &b);
 	print_stack(a, b);
 	stackclear(&a, free);
+
+	if (ac > 2)
+		return (0);
+	int	i = 0;
+	while (args[i])	
+	{
+		free(args[i]);
+		i++;
+	}
+	free(args);
 	return (0);
 }

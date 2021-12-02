@@ -23,6 +23,10 @@
 # include <stdio.h>
 //
 
+/* =============== MACROS =============== */
+# define CHUNK_SIZE_SMALL 20
+# define CHUNK_SIZE_BIG 45
+
 /* =============== STRUCTURES =============== */
 typedef struct	s_stack
 {
@@ -93,8 +97,10 @@ void	put_mina_to_top(t_stack **a);
 void	put_minb_to_top(t_stack **b);
 void	put_max_to_top(t_stack **b);
 int		sort_chunk_move(t_stack **a, t_stack **b, int min, int max);
-void	sort_chunk(t_stack **a, t_stack **b, int min, int max);
+void	sort_chunk(t_stack **a, t_stack **b, int min, int max, int chunk_size);
 void	sort_max(t_stack **a, t_stack **b);
 void	sort_two(t_stack **a, t_stack **b);
 void	sort_three(t_stack **a, t_stack **b);
+void	sort_five(t_stack **a, t_stack **b);
+
 #endif

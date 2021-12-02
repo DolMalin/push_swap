@@ -63,8 +63,8 @@ SORTING = \
 				sort_chunk.c\
 				sort_max.c\
 				sort_two.c\
-				sort_three.c
-
+				sort_three.c\
+				sort_five.c
 
 FILES = \
 				main.c\

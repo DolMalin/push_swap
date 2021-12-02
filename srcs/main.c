@@ -13,8 +13,7 @@
 #include "../includes/push_swap.h"
 
 /* 
-	- segfault with negative nbrs
-	- shorten algo for 4 and 5 nbrs
+	- segfault with negative nbrs (sort chunk should start at lowest nbr)
 	- opti (store all instructions in a list and then replace useless moves)
 	- opti for 500 nbr
 */
@@ -27,9 +26,9 @@ int main(int ac, char **av)
 
 	args = check_input_validity(ac, av);
 	init_stacks(&a, &b, args);
-//	print_stack(a, b);
+	print_stack(a, b);
 	sorting(&a, &b);
-//	print_stack(a, b);
+	print_stack(a, b);
 	stackclear(&a, free);
 
 	if (ac > 2)

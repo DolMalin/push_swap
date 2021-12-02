@@ -14,6 +14,7 @@
 
 /* 
 	- input can be a long string of args too? (checker)
+	- segfault with negative nbrs
 	- shorten algo for 4 and 5 nbrs
 	- opti (store all instructions in a list and then replace useless moves)
 */

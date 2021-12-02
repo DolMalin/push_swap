@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 17:48:04 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/01 18:44:40 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/02 09:23:01 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	sa(t_stack **a, t_stack **b)
 	t_stack	*temp;
 
 	(void)b;
-	if (stacksize(*a) < 3)
+	if (stacksize(*a) < 2)
 		return ;
 	temp = *a;
 	*a = (*a)->next;

@@ -60,6 +60,7 @@ SORTING = \
 				sort_chunk_move.c\
 				sort_chunk.c\
 				sort_max.c\
+				sort_two.c\
 				sort_three.c
 
 

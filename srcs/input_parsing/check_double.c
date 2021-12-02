@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 23:49:23 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/02 00:06:39 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/02 09:29:25 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	check_double(char **av)
 		j = i + 1;
 		while (av[j])
 		{
-			if (av[i][0] == av[j][0])
+			if (ft_strncmp(av[i], av[j], 11) == 0)
 				return (1);
 			j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 18:45:11 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/03 11:09:31 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/04 13:14:10 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	sorting(t_stack **a, t_stack **b)
 		sort_three(a, b);
 	else if (a_len <= 5)
 		sort_five(a, b);
-	else if (a_len <= 100)
+	else if (a_len < 150)
 	{
 		sort_chunk(a, b, stackmin(a), stackmin(a) + CHUNK_SIZE_SMALL, CHUNK_SIZE_SMALL);
 		sort_max(a, b);

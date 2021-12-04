@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 12:10:44 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/02 16:56:40 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/04 13:30:25 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	sort_chunk_move(t_stack **a, t_stack **b, int min, int max)
 	hold = get_hold(a, chunk);
 	if (put_nearest_to_top(a, b, hold, stacksize(*a)))
 	{
-		put_minb_to_top(b);
 		pb(a, b);
 		return (1);
 	}

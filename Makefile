@@ -12,13 +12,11 @@
 
 NAME = push_swap
 
-DEBUG = \
-				print_stack.c
-
 INPUT_PARSING = \
 				check_input_validity.c\
 				check_input_is_all_int.c\
-				check_double.c
+				check_double.c\
+				argsclear.c
 
 ERROR_HANDLING = \
 				exit_program_with_error.c
@@ -39,15 +37,12 @@ STACK_HANDLING = \
 				get_elem_pos.c\
 				sa.c\
 				sb.c\
-				ss.c\
 				pa.c\
 				pb.c\
 				ra.c\
 				rb.c\
-				rr.c\
 				rra.c\
 				rrb.c\
-				rrr.c\
 
 SORTING = \
 				sorting.c\
@@ -58,7 +53,7 @@ SORTING = \
 				put_minb_to_top.c\
 				put_max_to_top.c\
 				put_nearest_to_top.c\
-				move_elem_in_stack.c\
+				move.c\
 				sort_chunk_move.c\
 				sort_chunk.c\
 				sort_max.c\

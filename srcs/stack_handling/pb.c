@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 18:10:52 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/24 17:12:33by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/12/04 14:11:17 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/12/04 14:12:03 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void	pb(t_stack **a, t_stack **b)
 {
-
-	t_stack *start_a;
+	t_stack	*start_a;
 
 	start_a = (*a)->next;
 	stackadd_front(b, *a);

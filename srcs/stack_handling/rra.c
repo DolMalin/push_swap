@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 10:52:53 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/01 18:43:34 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/04 14:12:28 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	rra(t_stack **a, t_stack **b)
 {
 	t_stack	*temp_second;
-	t_stack *temp_before_last;
+	t_stack	*temp_before_last;
 	t_stack	*temp_last;
 
 	(void)b;

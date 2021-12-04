@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 16:40:28 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/02 16:41:37 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/04 14:14:07 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_stack	*stackmin_elem(t_stack **a)
 {
-	t_stack *start;
+	t_stack	*start;
 	t_stack	*min;
 
 	start = *a;

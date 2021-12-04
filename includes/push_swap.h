@@ -15,13 +15,8 @@
 
 /* =============== INCLUDES =============== */
 # include "../libft/libft.h"
-
 # include <limits.h>
 # include <stdlib.h>
-
-// TO REMOVE
-# include <stdio.h>
-//
 
 /* =============== MACROS =============== */
 # define CHUNK_SIZE_SMALL 20
@@ -41,21 +36,19 @@ typedef struct	s_chunk
 	int	max;
 }				t_chunk;
 
-
 typedef struct	s_hold
 {
 	int	first_pos;
 	int	second_pos;
 }				t_hold;
-/* =============== PROTOTYPES =============== */
 
-/* =============== DEBUG /TO REMOVE/ =============== */
-void	print_stack(t_stack *a, t_stack *b);
+/* =============== PROTOTYPES =============== */
 
 /* =============== INPUT PARSING =============== */
 int		check_input_is_all_int(int ac, char **args);
 int		check_double(char **args);
 char	**check_input_validity(int ac, char **av);
+void	argsclear(int ac, char **args);
 
 /* =============== ERROR HANDLING =============== */
 void	exit_program_with_error(void);
@@ -76,28 +69,25 @@ t_stack	*stackmax_elem(t_stack **a);
 int		get_elem_pos(t_stack **stack, t_stack *elem);
 void	sa(t_stack **a, t_stack **b);
 void	sb(t_stack **b, t_stack **a);
-void	ss(t_stack **a, t_stack **b);
 void	pa(t_stack **a, t_stack **b);
 void	pb(t_stack **a, t_stack **b);
 void	ra(t_stack **a, t_stack **b);
 void	rb(t_stack **b, t_stack **a);
-void	rr(t_stack **a, t_stack **b);
 void	rra(t_stack **a, t_stack **b);
 void	rrb(t_stack **b, t_stack **a);
-void	rrr(t_stack **a, t_stack **b);
 
 /* =============== SORTING =============== */
 void	sorting(t_stack **a, t_stack **b);
 int		is_in_chunk(int a, t_chunk chunk);
 t_hold	get_hold(t_stack **a, t_chunk chunk);
 int		hold_to_top_moves_len(int hold_pos, int stack_size);
-void	move_elem_in_stack(t_stack **a, t_stack **b, void (*f)(t_stack **, t_stack **), int count);
+void	move(t_stack **a, t_stack **b, void (*f)(t_stack **, t_stack **), int count);
 int		put_nearest_to_top(t_stack **a, t_stack **b, t_hold hold, int stack_size);
 void	put_mina_to_top(t_stack **a);
 void	put_minb_to_top(t_stack **b);
 void	put_max_to_top(t_stack **b);
 int		sort_chunk_move(t_stack **a, t_stack **b, int min, int max);
-void	sort_chunk(t_stack **a, t_stack **b, int min, int max, int chunk_size);
+void	sort_chunk(t_stack **a, t_stack **b, int min, int chunk_size);
 void	sort_max(t_stack **a, t_stack **b);
 void	sort_two(t_stack **a, t_stack **b);
 void	sort_three(t_stack **a, t_stack **b);

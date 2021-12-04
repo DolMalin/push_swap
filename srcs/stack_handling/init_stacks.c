@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 15:15:19 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/02 12:02:15 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/04 14:10:45 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	init_stacks(t_stack **a, t_stack **b, char **args)
 {
-	int	i;
-	t_stack *buff;
+	int		i;
+	t_stack	*buff;
 
 	i = 0;
 	(void)b;

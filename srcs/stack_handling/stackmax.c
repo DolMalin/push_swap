@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 12:28:25 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/01 13:30:30 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/04 14:13:15 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	stackmax(t_stack **a)
 {
-	t_stack *start;
-	int	max;
+	t_stack	*start;
+	int		max;
 
 	start = *a;
 	max = start->content;

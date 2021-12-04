@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 11:19:03 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/01 16:26:02 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/04 14:12:37 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	rrb(t_stack **b, t_stack **a)
 {
 	t_stack	*temp_second;
-	t_stack *temp_before_last;
+	t_stack	*temp_before_last;
 	t_stack	*temp_last;
 
 	(void)a;

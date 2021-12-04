@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 23:49:44 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/01 23:50:11 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/04 14:04:19 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	check_stack_sort(t_stack **a)
 {
-	t_stack *start;
+	t_stack	*start;
 
 	start = *a;
 	while (start->next)
 	{
 		if (start->content > start->next->content)
 			return (0);
-		start = start->next;	
+		start = start->next;
 	}
 	return (1);
 }

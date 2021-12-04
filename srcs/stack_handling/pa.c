@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 18:31:29 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/11/25 12:37:46 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/04 14:11:03 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	pa(t_stack **a, t_stack **b)
 {
-	t_stack *start_b;
+	t_stack	*start_b;
 
 	start_b = (*b)->next;
 	stackadd_front(a, *b);

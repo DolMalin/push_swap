@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 12:31:44 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/03 10:26:48 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/04 13:48:27 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	put_max_to_top(t_stack **b)
 {
 	int		max;
-	t_stack *max_elem;
+	t_stack	*max_elem;
 
 	if (stacksize(*b) < 1)
 		return ;
@@ -29,5 +29,4 @@ void	put_max_to_top(t_stack **b)
 	}
 	while ((*b)->content != max)
 		rrb(b, b);
-
 }

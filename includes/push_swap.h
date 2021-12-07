@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 16:05:05 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/01 11:20:42by pdal-mol         ###   ########.fr       */
+/*   Created: 2021/12/07 15:48:40 by pdal-mol          #+#    #+#             */
+/*   Updated: 2021/12/07 15:58:39 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,20 @@
 /* =============== MACROS =============== */
 # define CHUNK_SIZE_SMALL 20
 # define CHUNK_SIZE_BIG 45
-
 /* =============== STRUCTURES =============== */
-typedef struct	s_stack
+typedef struct s_stack
 {
-	int	content;
-	struct s_stack *next;
+	int				content;
+	struct s_stack	*next;
 }				t_stack;
 
-
-typedef struct	s_chunk
+typedef struct s_chunk
 {
 	int	min;
 	int	max;
 }				t_chunk;
 
-typedef struct	s_hold
+typedef struct s_hold
 {
 	int	first_pos;
 	int	second_pos;
@@ -81,8 +79,8 @@ void	sorting(t_stack **a, t_stack **b);
 int		is_in_chunk(int a, t_chunk chunk);
 t_hold	get_hold(t_stack **a, t_chunk chunk);
 int		hold_to_top_moves_len(int hold_pos, int stack_size);
-void	move(t_stack **a, t_stack **b, void (*f)(t_stack **, t_stack **), int count);
-int		put_nearest_to_top(t_stack **a, t_stack **b, t_hold hold, int stack_size);
+void	mv(t_stack **a, t_stack **b, void (*f)(t_stack **, t_stack **), int c);
+int		put_nearest_to_top(t_stack **a, t_stack **b, t_hold h, int s);
 void	put_mina_to_top(t_stack **a);
 void	put_minb_to_top(t_stack **b);
 void	put_max_to_top(t_stack **b);

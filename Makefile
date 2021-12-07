@@ -53,7 +53,7 @@ SORTING = \
 				put_minb_to_top.c\
 				put_max_to_top.c\
 				put_nearest_to_top.c\
-				move.c\
+				mv.c\
 				sort_chunk_move.c\
 				sort_chunk.c\
 				sort_max.c\

@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 11:15:13 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/04 13:36:32 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/09 11:53:32 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	**check_input_validity(int ac, char **av)
 		args = ft_split(av[1], ' ');
 	else
 		args = &av[1];
-	if (!check_input_is_all_int(ac, args) || check_double(args))
+	if (!check_input_is_all_int(args) || check_double(args))
 		exit_program_with_error();
 	return (args);
 }

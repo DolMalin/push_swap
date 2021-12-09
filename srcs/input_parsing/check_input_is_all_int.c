@@ -6,13 +6,13 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 11:30:00 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/02 11:55:42 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/09 11:53:02 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	check_input_is_all_int(int ac, char **args)
+int	check_input_is_all_int(char **args)
 {
 	int			i;
 	int			j;
@@ -20,7 +20,7 @@ int	check_input_is_all_int(int ac, char **args)
 
 	i = 0;
 	j = 0;
-	while (i < ac - 1)
+	while (args[i])
 	{
 		j = 0;
 		while (args[i][j])

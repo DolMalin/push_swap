@@ -6,7 +6,7 @@
 /*   By: pdal-mol <dolmalinn@gmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 15:48:40 by pdal-mol          #+#    #+#             */
-/*   Updated: 2021/12/07 16:07:42 by pdal-mol         ###   ########.fr       */
+/*   Updated: 2021/12/09 11:53:15 by pdal-mol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ typedef struct s_hold
 }				t_hold;
 
 /* =============== INPUT PARSING =============== */
-int		check_input_is_all_int(int ac, char **args);
+int		check_input_is_all_int(char **args);
 int		check_double(char **args);
 char	**check_input_validity(int ac, char **av);
 void	argsclear(int ac, char **args);
